@@ -1,0 +1,9 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["airbnb", "airbnb-base", "airbnb-typescript"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "prefer-regex-literals": ["error", { "disallowRedundantWrapping": true }]
+  }
+}
