@@ -1,4 +1,9 @@
 .sources {
+  position: -webkit-sticky;
+  position: sticky;
+  background: #17181c;
+  z-index: 2;
+  top: 10px;
   width: 300px;
   overflow-y: scroll;
   overflow-x: hidden;

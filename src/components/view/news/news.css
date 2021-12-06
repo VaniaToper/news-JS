@@ -1,5 +1,7 @@
 .news {
   margin: 0 auto;
+  font-weight: 600;
+  font-size: 25px;
 }
 .news__item {
   display: flex;
