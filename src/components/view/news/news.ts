@@ -1,17 +1,14 @@
 import './news.css';
+import { INews } from '../../../types/types';
 
 class News {
-  draw(data) {
-    const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
-
-    const fragment = document.createDocumentFragment();
-    const newsItemTemp = document.querySelector('#newsItemTemp');
-
+  draw(data: Array<INews>): void {
+    const news: Array<INews> = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
+    const fragment: DocumentFragment = document.createDocumentFragment()!;
+    const newsItemTemp: HTMLTemplateElement = document.querySelector('#newsItemTemp')!;
     news.forEach((item, idx) => {
-      const newsClone = newsItemTemp.content.cloneNode(true);
-
+      const newsClone: DocumentFragment = newsItemTemp.content.cloneNode(true);
       if (idx % 2) newsClone.querySelector('.news__item').classList.add('alt');
-
       newsClone.querySelector('.news__meta-photo').style.backgroundImage = `url(${
         item.urlToImage || 'img/news_placeholder.jpg'
       })`;
